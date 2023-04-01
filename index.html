@@ -1,66 +1,93 @@
 <html>
 <body >
     <fieldset align="center" style="width:35%;" >
-           <legend >Booking Details</legend>
-<center>
-     <table width="80%"> 
-       <tr>     
-          <td>Movie:</td>          
-          <td><select id="movie" onchange="picAdd()" >
-                     <option >-Select Movie-</option>
-                     <option>Fast X</option>
-                     <option >Shazam</option>
-                     <option >Ant Man</option>
-                     <option >Puss in Boots</option>
-                     <option >Flash</option>
-                 </select>
-           </td>   
-       </tr>
-       <tr>
-           <td>Theaters:</td>  
-           <td> 
-              <select id="theater">
-                     <option>-Select Theater-</option>
-                     <option>PVR Cinemas</option>
-                     <option>INOX</option>
-                     <option >IMAX</option>
-                     <option >Funcinema</option>
-              </select>
-          </td>   
-       </tr>
-       <tr>
-           <td>Date:</td>
-           <td><input type="date"  id="showDate"></td>   
-       </tr>
-       <tr>
-         <td>Email:</td> 
-          <td><input type="text" id="inputEmail" placeholder="Enter Email" onkeyup="emailCheck()">
-              <img id="pic2">     
-         </td>  
-       </tr>
-       <tr>
-           <td>#Tickets:</td> 
-           <td><input type="text" id="ticketsNo"></td>  
-       </tr> 
-       <tr>
-           <td>Total Price:</td>
-           <th><font color="red" id="result"></font></th>   
-       </tr> 
-       <tr>
-            <th colspan="2"><input type="button" value="Book Tickets" onclick="call()"></th>  
-       </tr>     
-    </table>
-</center>
+        <legend >
+            Booking Details
+        </legend>
+
+        <center>
+            <table width="80%"> 
+                <tr>     
+                    <td>
+                        Movie:
+                    </td>          
+                    <td>
+                        <select id="movie" onchange="picAdd()" >
+                            <option >-Select Movie-</option>
+                            <option>Fast X</option>
+                            <option >Shazam</option>
+                            <option >Ant Man</option>
+                            <option >Puss in Boots</option>
+                            <option >Flash</option>
+                        </select>
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        Theaters:
+                    </td>  
+                    <td> 
+                        <select id="theater">
+                            <option>-Select Theater-</option>
+                            <option>PVR Cinemas</option>
+                            <option>INOX</option>
+                            <option >IMAX</option>
+                            <option >Funcinema</option>
+                        </select>
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        Date:
+                    </td>
+                    <td>
+                        <input type="date"  id="showDate">
+                    </td>   
+                </tr>
+                <tr>
+                    <td>
+                        Email:
+                    </td> 
+                    <td>
+                        <input type="text" id="inputEmail" placeholder="Enter Email" onkeyup="emailCheck()">
+                        <img id="pic2">     
+                    </td>  
+                </tr>
+                <tr>
+                    <td>
+                        #Tickets:
+                    </td> 
+                    <td>
+                        <input type="text" id="ticketsNo">
+                    </td>  
+                </tr> 
+                <tr>
+                    <td>
+                        Total Price:
+                    </td>
+                    <th>
+                        <font color="red" id="result"></font>
+                    </th>   
+                </tr> 
+                <tr>
+                    <th colspan="2">
+                        <input type="button" value="Book Tickets" onclick="call()">
+                    </th>  
+                </tr>     
+            </table>
+        </center>
     </fieldset>
-     <img  width="200" id="pic1">
-     <p>
-        Discount 5% if show on non weekend.<br>
-        Discount 10% if no. of tickets >=10
-     </p>
 
-    <script src="index.js" >
-       
+
+    <img  width="200" id="pic1">
+
+    <p>
+    Discount 5% if show on non weekend.<br>
+    Discount 10% if no. of tickets >=10
+    </p>
+
+
+    <script src="index.js" >      
     </script>
-    </body>
-
-    </html>
+</body>
+</html>

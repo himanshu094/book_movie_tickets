@@ -3,11 +3,11 @@
 function call()
 
 { 
-    if(movie.value!="-Select Movie-")
-    {   if(theater.value!="-Select Theater-")
+    if(movie.selectedIndex)                    /////movie.value!="-Select Movie-"
+    {   if(theater.selectedIndex)             ////theater.value!="-Select Theater-"
         {   if(showDate.value) 
             {   if(pic2.alt=="right")
-                {   if(ticketsNo.value)
+                {   if(parseInt(ticketsNo.value))    ///ticketsNo.value
 
                     {   let no=parseInt(ticketsNo.value)
                         let d=new Date(showDate.value)
@@ -26,9 +26,9 @@ function call()
                         result.innerHTML=price;
 
 
-                    }else    result.innerHTML="Please Enter no of tickets";
+                    }else    result.innerHTML="Please Enter no of tickets in digits";
 
-                }else    result.innerHTML="Please Enter email";
+                }else    result.innerHTML="Please Enter correct email id";
 
             }else    result.innerHTML="Please Select Date"; 
 
@@ -47,6 +47,7 @@ function picAdd()
 }
 
 
+
 function emailCheck()
 
 {  let email=inputEmail.value; 
@@ -56,14 +57,20 @@ function emailCheck()
     if( (email.indexOf("@")==email.lastIndexOf("@")) && email.lastIndexOf("@")!=-1  )
     {   let n=email.indexOf("@")                
         if( (email.indexOf(".",n)==email.lastIndexOf(".")) && email.lastIndexOf(".")!=-1 && email.charAt(n+1)!=".") 
-            { pic2.src="right.png";  
-                pic2.alt="right"}                                 
+        {   pic2.src="right.png";  
+            pic2.alt="right"
+        }  
+
     }
         
     if(email.startsWith("@") || email.endsWith("@")) 
-    { pic2.src="cross.png" } 
+    { 
+        pic2.src="cross.png"
+    } 
 
     if(email.startsWith(".") || email.endsWith("."))
-    {  pic2.src="cross.png" }
+    {  
+        pic2.src="cross.png" 
+    }
     
 }
